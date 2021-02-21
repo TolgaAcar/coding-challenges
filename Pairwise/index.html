@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../styles/styles.css" />
+	</head>
+	<body>
+		<div class="problem-title title">Pairwise</div>
+
+		<div class="problem-explanation explanation">
+			Given an array arr, find element pairs whose sum equal the second
+			argument arg and return the sum of their indices. You may use
+			multiple pairs that have the same numeric elements but different
+			indices. Each pair should use the lowest possible available indices.
+			Once an element has been used it cannot be reused to pair with
+			another element. For instance, pairwise([1, 1, 2], 3) creates a pair
+			[2, 1] using the 1 at index 0 rather than the 1 at index 1, because
+			0+2 < 1+2. For example pairwise([7, 9, 11, 13, 15], 20) returns 6.
+			The pairs that sum to 20 are [7, 13] and [9, 11]. We can then write
+			out the array with their indices and values.
+		</div>
+		<hr />
+		<div class="solution-explanation explanation">
+			<div>Index 0 1 2 3 4</div>
+			<div>Value 7 9 11 13 15</div>
+
+			Below we'll take their corresponding indices and add them.
+			<div>7 + 13 = 20 → Indices 0 + 3 = 3</div>
+			<div>9 + 11 = 20 → Indices 1 + 2 = 3</div>
+			<div>3 + 3 = 6 → Return 6</div>
+		</div>
+		<hr />
+		<ul class="test-cases">
+			<div class="test-cases-title title">Test Cases</div>
+
+			<li class="test-case">
+				pairwise([1, 4, 2, 3, 0, 5], 7) should return 11.
+			</li>
+			<li class="test-case">
+				pairwise([1, 3, 2, 4], 4) should return 1.
+			</li>
+			<li class="test-case">pairwise([1, 1, 1], 2) should return 1.</li>
+			<li class="test-case">
+				pairwise([0, 0, 0, 0, 1, 1], 1) should return 10.
+			</li>
+			<li class="test-case">pairwise([], 100) should return 0.</li>
+		</ul>
+	</body>
+
+	<script src="main.js"></script>
+</html>
