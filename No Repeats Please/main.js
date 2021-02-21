@@ -4,6 +4,8 @@ function permAlone(str) {
 	return i;
 }
 
+// Recursively search all permutations of given string
+// if the found permutation has no repeated consecutive letters increase i
 function findPermutaions(prefix, str) {
 	const n = str.length;
 	if (n === 0) {
@@ -20,6 +22,7 @@ function findPermutaions(prefix, str) {
 	}
 }
 
+// returns true if the given string has repeated consecutive letters
 function hasRepeatedConsecutiveLetters(str) {
 	for (let i = 0; i < str.length - 1; i++) {
 		if (str.charAt(i) === str.charAt(i + 1)) {
