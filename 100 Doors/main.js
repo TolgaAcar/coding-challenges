@@ -17,8 +17,6 @@ function getFinalOpenedDoors(numDoors) {
 		}
 	}
 
-	// console.log(doorsArr);
-	// console.log(result);
 	return result;
 }
 
@@ -38,4 +36,4 @@ function visitXDoors(index, arr) {
 }
 
 //Test
-getFinalOpenedDoors();
+console.log(getFinalOpenedDoors());
